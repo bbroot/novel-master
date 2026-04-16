@@ -166,4 +166,4 @@ python scripts/update_state.py "书名" 5 6200 2
 
 ## License
 
-MIT / 可自由使用、修改、分发
+MIT / 可自由使用，请保留出处 bbroot
