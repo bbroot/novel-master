@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280">
+  <defs>
+    <linearGradient id="bgL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f4ed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ede7db;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentL" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c0392b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8e44ad;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="280" fill="url(#bgL)" rx="16"/>
+  <text x="60" y="100" font-family="Georgia, 'Noto Serif SC', serif" font-size="52" font-weight="bold" fill="#2c1810">📖 novel-master</text>
+  <text x="60" y="150" font-family="Georgia, 'Noto Serif SC', serif" font-size="22" fill="#5d4037">出版级中文长篇小说 · 全流程 AI 创作技能包</text>
+  <rect x="60" y="175" width="520" height="3" rx="1.5" fill="url(#accentL)"/>
+  <text x="60" y="215" font-family="'Segoe UI', sans-serif" font-size="15" fill="#795548">▸ 开书立项 · 策划书 · 大纲规划 · 分章撰写 · 伏笔管理 · 质量控制</text>
+  <text x="60" y="245" font-family="'Segoe UI', sans-serif" font-size="13" fill="#a1887f">SKILL.md + 10 references + 3 scripts · MIT License</text>
+</svg>
