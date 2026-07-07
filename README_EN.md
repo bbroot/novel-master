@@ -16,8 +16,8 @@
 </p>
 
 <p align="center">
-  <a href="https://clawhub.ai/bbroot/skills/novel-master"><img src="https://img.shields.io/badge/ClawHub-v1.0.0-7b2ff7?style=flat-square" alt="ClawHub"></a>
-  <a href="https://github.com/bbroot/novel-master"><img src="https://img.shields.io/badge/GitHub-open-2ea44f?style=flat-square" alt="GitHub"></a>
+  <a href="https://clawhub.ai/USER/skills/novel-master"><img src="https://img.shields.io/badge/ClawHub-v1.0.0-7b2ff7?style=flat-square" alt="ClawHub"></a>
+  <a href="https://github.com/USER/novel-master"><img src="https://img.shields.io/badge/GitHub-open-2ea44f?style=flat-square" alt="GitHub"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="MIT"></a>
 </p>
 
@@ -140,6 +140,6 @@ Licensed under [MIT](LICENSE). Free to use, modify, and distribute.
 ---
 
 <p align="center">
-  Made with ❤️ by <a href="https://github.com/bbroot">bbroot</a><br>
+  Made with ❤️ by <a href="https://github.com/USER">USER</a><br>
   <sub>For every writer who takes words seriously</sub>
 </p>
