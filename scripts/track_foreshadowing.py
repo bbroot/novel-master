@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 track_foreshadowing.py - 伏笔管理工具
 用法:
@@ -19,7 +20,8 @@ def main():
     book_name = sys.argv[1]
     action = sys.argv[2]
     
-    fp_file = Path.home() / ".qclaw" / "workspace" / "novels" / book_name / "tracker" / "foreshadowing.json"
+    novels_root = Path(os.environ.get("NOVELS_ROOT", Path.cwd() / "novels")).expanduser()
+    fp_file = novels_root / book_name / "tracker" / "foreshadowing.json"
     
     if not fp_file.exists():
         print(f"错误: 未找到项目 {book_name} 的伏笔追踪文件")

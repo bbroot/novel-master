@@ -21,7 +21,9 @@ import os, sys, json
 from pathlib import Path
 from datetime import datetime
 
-ROOT = Path.home() / ".qclaw" / "workspace" / "novels"
+# 跨 Agent 数据根目录：优先环境变量，回退当前工作目录下的 novels/
+# 支持 WorkBuddy / 豆包工作 / Claude Code / Cursor / CodeBuddy / QClaw
+ROOT = Path(os.environ.get("NOVELS_ROOT", Path.cwd() / "novels")).expanduser()
 
 def _chars_dir(book):
     return ROOT / book / "settings" / "characters"

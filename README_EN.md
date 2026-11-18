@@ -16,12 +16,14 @@
 </p>
 
 <p align="center">
-  <a href="https://clawhub.ai/USER/skills/novel-master"><img src="https://img.shields.io/badge/ClawHub-v1.0.0-7b2ff7?style=flat-square" alt="ClawHub"></a>
-  <a href="https://github.com/USER/novel-master"><img src="https://img.shields.io/badge/GitHub-open-2ea44f?style=flat-square" alt="GitHub"></a>
+  <a href="https://clawhub.ai/bbroot/skills/novel-master"><img src="https://img.shields.io/badge/ClawHub-v2.1.0-7b2ff7?style=flat-square" alt="ClawHub"></a>
+  <a href="https://github.com/bbroot/novel-master"><img src="https://img.shields.io/badge/GitHub-open-2ea44f?style=flat-square" alt="GitHub"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="MIT"></a>
 </p>
 
 ---
+
+> 📖 **多平台安装**（WorkBuddy / 豆包工作 / Claude Code / Cursor / CodeBuddy）见 [INSTALL.md](INSTALL.md)
 
 ## 🌟 Why novel-master?
 
@@ -94,7 +96,7 @@ The AI will automatically:
 ### Project Directory
 
 ```
-~/.qclaw/workspace/novels/<book-name>/
+novels/<book-name>/ (set via NOVELS_ROOT env var; defaults to ./novels)
 ├── settings/
 │   ├── world.md          # World overview
 │   ├── characters/       # Character voice cards

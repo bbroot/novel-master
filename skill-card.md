@@ -40,10 +40,10 @@ Mitigation: Use simple book names without slashes or path components, and ask th
 **Output Type(s):** [Text, Markdown, JSON, Shell commands, Guidance] <br>
 **Output Format:** [Chinese prose and Markdown planning drafts, with JSON tracker/state files and optional shell command examples for helper scripts.] <br>
 **Output Parameters:** [1D] <br>
-**Other Properties Related to Output:** [The security scan reports no evidence of hidden data access or exfiltration; normal use creates and updates local files under ~/.qclaw/workspace/novels/.] <br>
+**Other Properties Related to Output:** [The security scan reports no evidence of hidden data access or exfiltration; normal use creates and updates local files under the NOVELS_ROOT data directory (default ./novels).] <br>
 
 ## Skill Version(s): <br>
-1.0.1 (source: server release metadata) <br>
+2.1.0 (source: GitHub release metadata) <br>
 
 ## Ethical Considerations: <br>
 Users should evaluate whether this skill is appropriate for their environment, review any generated or modified files before relying on them, and apply their organization's safety, security, and compliance requirements before deployment. <br>

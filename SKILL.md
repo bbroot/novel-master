@@ -1,5 +1,6 @@
 ---
 name: novel-master
+version: 2.1.0
 description: 出版级中文长篇小说全流程创作技能包。当用户要求写小说、创作故事、分章节写作、连续剧情、章节悬念、长篇小说时触发。覆盖从世界观设定、人物塑造、大纲规划、分章撰写到伏笔管理、质量控制的全链路。
 ---
 
@@ -31,7 +32,7 @@ description: 出版级中文长篇小说全流程创作技能包。当用户要�
 每个小说项目按以下目录组织：
 
 ```
-~/.qclaw/workspace/novels/<书名>/
+novels/<书名>/（由 NOVELS_ROOT 环境变量指定，默认当前工作目录）
 ├── settings/
 │   ├── world.md          # 世界观总览
 │   ├── characters/       # 人物声线卡

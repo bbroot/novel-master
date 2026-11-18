@@ -15,7 +15,9 @@ ncg.py - 节点压缩图谱（Node-Compressed Graph, NCG）
 import os, sys, json
 from pathlib import Path
 
-ROOT = Path.home() / ".qclaw" / "workspace" / "novels"
+# 跨 Agent 数据根目录：优先环境变量，回退当前工作目录下的 novels/
+# 支持 WorkBuddy / 豆包工作 / Claude Code / Cursor / CodeBuddy / QClaw
+ROOT = Path(os.environ.get("NOVELS_ROOT", Path.cwd() / "novels")).expanduser()
 
 def _ncg_file(book):
     return ROOT / book / "tracker" / "ncg.json"

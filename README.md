@@ -5,7 +5,7 @@
 > 专为 OpenClaw 设计的端到端小说创作助手，覆盖从灵感到终稿的完整出版链路。
 > **v2 全新架构：分布式角色子进程 + 节点压缩图谱，让百万字级创作不烂尾、配角不 OOC。**
 >
-> 📦 **v2.0.0 完整源码（含 v2 脚本与参考文档）已发布在 GitHub：**[`bbroot/novel-master`](https://github.com/bbroot/novel-master)。ClawHub 市场页为 v1 入口，v2 内容请从 GitHub 获取与安装。
+> 📦 **v2.1.0 完整源码（含 v2 脚本与参考文档）已发布在 GitHub：**[`bbroot/novel-master`](https://github.com/bbroot/novel-master)。ClawHub 市场页为 v1 入口，v2 内容请从 GitHub 获取与安装。
 
 <p align="center">
   <picture>
@@ -20,13 +20,15 @@
 
 <p align="center">
   <a href="https://clawhub.ai/bbroot/skills/novel-master"><img src="https://img.shields.io/badge/ClawHub-marketplace-7b2ff7?style=flat-square" alt="ClawHub"></a>
-  <a href="https://github.com/bbroot/novel-master"><img src="https://img.shields.io/badge/GitHub-v2.0.0-2ea44f?style=flat-square" alt="GitHub"></a>
+  <a href="https://github.com/bbroot/novel-master"><img src="https://img.shields.io/badge/GitHub-v2.1.0-2ea44f?style=flat-square" alt="GitHub"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="MIT"></a>  <a href="#-小说创作三件套"><img src="https://img.shields.io/badge/套装-小说创作三件套-Purple?style=flat-square" alt="trio"></a>
 
   <a href="#v2-分布式创作架构"><img src="https://img.shields.io/badge/架构-分布式-Purple?style=flat-square" alt="PpC"></a>
 </p>
 
 ---
+
+> 📖 **多平台安装**（WorkBuddy / 豆包工作 / Claude Code / Cursor / CodeBuddy）见 [INSTALL.md](INSTALL.md)
 
 <h2 id="中文">🌟 为什么选择 novel-master？</h2>
 
@@ -117,7 +119,7 @@ AI 将自动完成：阅读类型参考 → 输出《创作策划书》→ 生�
 ### 项目目录结构
 
 ```
-~/.qclaw/workspace/novels/<书名>/
+novels/<书名>/（由 NOVELS_ROOT 环境变量指定，默认当前工作目录）
 ├── settings/
 │   ├── world.md          # 世界观总览
 │   ├── characters/       # 人物声线卡 + 状态机 + 偏差包

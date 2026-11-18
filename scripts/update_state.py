@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 update_state.py - 更新写作状态
 用法: python update_state.py <书名> <章节号> <字数> [伏笔数]
@@ -18,7 +19,8 @@ def main():
     words = int(sys.argv[3])
     unresolved_fp = int(sys.argv[4]) if len(sys.argv) > 4 else None
     
-    state_file = Path.home() / ".qclaw" / "workspace" / "novels" / book_name / "state.json"
+    novels_root = Path(os.environ.get("NOVELS_ROOT", Path.cwd() / "novels")).expanduser()
+    state_file = novels_root / book_name / "state.json"
     
     if not state_file.exists():
         print(f"错误: 未找到项目 {book_name}，请先运行 init_book.py")

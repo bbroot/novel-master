@@ -13,7 +13,9 @@ auditor.py - 量子审计与原创门禁（Quantum Auditor）
 import os, sys, json
 from pathlib import Path
 
-ROOT = Path.home() / ".qclaw" / "workspace" / "novels"
+# 跨 Agent 数据根目录：优先环境变量，回退当前工作目录下的 novels/
+# 支持 WorkBuddy / 豆包工作 / Claude Code / Cursor / CodeBuddy / QClaw
+ROOT = Path(os.environ.get("NOVELS_ROOT", Path.cwd() / "novels")).expanduser()
 
 def _load(p):
     return json.loads(p.read_text(encoding="utf-8")) if p.exists() else None

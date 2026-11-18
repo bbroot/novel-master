@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 init_book.py - 创建新小说项目结构
 用法: python init_book.py <书名> [作者名]
@@ -15,8 +16,9 @@ def main():
     book_name = sys.argv[1].strip()
     author = sys.argv[2].strip() if len(sys.argv) > 2 else ""
     
-    # 创建项目根目录
-    base_dir = Path.home() / ".qclaw" / "workspace" / "novels" / book_name
+    # 创建项目根目录（跨 Agent：环境变量 NOVELS_ROOT 可覆盖，默认当前工作目录）
+    novels_root = Path(os.environ.get("NOVELS_ROOT", Path.cwd() / "novels")).expanduser()
+    base_dir = novels_root / book_name
     dirs = [
         base_dir / "settings" / "characters",
         base_dir / "outline",
