@@ -46,11 +46,17 @@ def main():
     
     # 创建冲突记录
     conflicts = {"冲突列表": []}
+
+    # 创建情节总线（v2 PpC 机制依赖；此前无任何脚本创建，导致 pull/recover 链路断裂）
+    plot_bus = []
+    ncg = {"nodes": [], "super_nodes": []}
     
     # 写文件
     (base_dir / "state.json").write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
     (base_dir / "tracker" / "foreshadowing.json").write_text(json.dumps(foreshadowing, ensure_ascii=False, indent=2), encoding="utf-8")
     (base_dir / "tracker" / "conflicts.json").write_text(json.dumps(conflicts, ensure_ascii=False, indent=2), encoding="utf-8")
+    (base_dir / "tracker" / "plot_bus.json").write_text(json.dumps(plot_bus, ensure_ascii=False, indent=2), encoding="utf-8")
+    (base_dir / "tracker" / "ncg.json").write_text(json.dumps(ncg, ensure_ascii=False, indent=2), encoding="utf-8")
     (base_dir / "tracker" / "style-log.md").write_text(f"# 文风日志 - {book_name}\n\n## 记录\n", encoding="utf-8")
     (base_dir / "settings" / "world.md").write_text(f"# 世界观设定 - {book_name}\n\n", encoding="utf-8")
     (base_dir / "outline" / "arc-outline.md").write_text(f"# 分卷大纲 - {book_name}\n\n", encoding="utf-8")

@@ -78,18 +78,27 @@ def cmd_view(book, kind):
         print("未知视图，可选 timeline|character|causal")
 
 def cmd_super(book, window=10):
+    if not isinstance(window, int) or window <= 0:
+        print("错误: --window 必须为正整数"); sys.exit(1)
     data = _load(book)
-    nodes = data["nodes"]
-    # 简单聚合：按 window 切片，取首尾章号
+    # 按章号排序后再切片，避免回填乱序导致 cover 章号倒挂
+    nodes = sorted(data.get("nodes") or [], key=lambda x: x.get("chapter", 0))
     supers = []
     for i in range(0, len(nodes), window):
         chunk = nodes[i:i+window]
         if not chunk:
             continue
-        c0, c1 = chunk[0]["chapter"], chunk[-1]["chapter"]
-        summary = chunk[-1]["text"]
+        chapters = [n.get("chapter", 0) for n in chunk]
+        c0, c1 = min(chapters), max(chapters)
+        # 摘要取章号最大节点的文本；合并成员节点的全部因果边
+        summary = max(chunk, key=lambda x: x.get("chapter", 0)).get("text", "")
+        edges = []
+        for n in chunk:
+            for e in (n.get("edges") or []):
+                if e not in edges:
+                    edges.append(e)
         supers.append({"id": f"s-{len(supers)+1:02d}", "cover": f"第{c0}-{c1}章",
-                       "summary": summary, "edges": []})
+                       "summary": summary, "edges": edges})
     data["super_nodes"] = supers
     _save(book, data)
     print(f"OK: 已聚合 {len(supers)} 个超节点 (window={window})")
